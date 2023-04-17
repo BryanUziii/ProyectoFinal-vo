@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse</title>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6804/6804506.png">
+
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    .main {
+    margin-top: 150x;      
+    }
+
+    .login-box {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 450px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    /* background: #ffffff; */
+    box-sizing: border-box;
+    /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
+    border-radius: 10px;
+    margin-bottom: 2em;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  20px 20px 60px #666666,
+             -20px -20px 60px #ffffff;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      color: #000;
+    }
+
+    .login-box .user-box {
+    position: relative;
+    }
+
+    .login-box .user-box input {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    background: transparent;
+    }
+
+    .login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    pointer-events: none;
+    transition: .5s;
+    }
+
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #333;
+    font-size: 12px;
+    }
+
+    .login-box form .btnSignup {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    border: none;
+    background-color: transparent;
+    }
+
+    .login-box .btnSignup:hover {
+    background: #2db885;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #2db885,
+                0 0 25px #2db885,
+                0 0 50px #2db885,
+                0 0 100px #2db885;
+    }
+
+    .login-box .btnSignup span {
+    position: absolute;
+    display: block;
+    }
+
+    @keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,100% {
+        left: 100%;
+    }
+    }
+
+    .login-box .btnSignup span:nth-child(1) {
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2db885);
+    animation: btn-anim1 2s linear infinite;
+    }
+</style>
+
+<body class="background">
+    <header>
+        <div class="">
+            <h3 class="titulo">
+                Celulandia
+
+            </h3>
+
+            <div class="navBar">
+                <div class="button-row">
+                    <div><a title="INICIO" class="active" href="/pagPrincipal"></a></div>
+                    <div><a title="PRODUCTOS" class="active" href="/pagPrincipal_productos"></a></div>
+                    <div><a title="CONTACTO" class="active" href="/pagPrincipal_contacto"></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+<div class="main">
+    <div class="login-box">
+ 
+      <form class="container" onsubmit="return crearUsuario()">
+        <h2>Nuevo Usuario</h2>
+        <div class="user-box">
+          <input id="username" name="username" type="text" required="true">
+          <label>Usuario</label>
+        </div>
+        <div class="user-box">
+          <input id="contraseña" name="contraseña" type="password" required="true">
+          <label>Contraseña</label>
+        </div>
+        <div class="user-box">
+          <input id="telefono" name="telefono" type="number" required="true">
+          <label>Telefono</label>
+        </div>
+        <div class="user-box">
+          <input id="domicilio" name="domicilio" type="text" required="true">
+          <label>Domicilio</label>
+        </div>
+        <div class="user-box">
+          <input id="email" name="email" type="email" required="true">
+          <label>Correo</label>
+        </div>
+        <center>
+        <button class="btnSignup" type="submit">
+          Crear Usuario
+          <span></span>
+        </button>
+        <br><br>
+        <p>¿Ya tienes una cuenta? <a href="/pagPrincipal_login">Haz clic aquí para iniciar sesión</a></p>
+      </center>
+      </form>
+    </div>
+
+      
+</div>
+
+  <footer>
+    <small>UPSIN 2023©</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.js"></script>
+  <script src="/js/usuarios.js"></script>
+</body>
+
+</html>

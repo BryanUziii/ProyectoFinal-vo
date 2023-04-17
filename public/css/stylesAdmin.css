@@ -1,0 +1,145 @@
+/* CSS PARA EL BOTON AGREGAR */
+.btnAgregar {
+    position: relative;
+    padding: 10px;
+    border: none;
+    background-color: #2db885;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.btnAgregar svg {
+    margin-right: 0 10px;
+}
+
+.btnAgregar:hover svg {
+    transform:translateX(4.1em) rotate(180deg);
+    color: #2db885;
+    transition: all .7s;
+}
+
+.btnAgregar:hover {
+    transform: scale(1.05);
+    transition: transform .7s;
+}
+
+.btnAgregar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #fafafa;
+    border: 3px solid #2db885;
+    opacity: 1;
+    transition: width 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.btnAgregar:hover::before {
+    width: 100%;
+}
+
+/* BOTONES PARA ACTIVAR O DESACTIVAR */
+/*INACTIVO */
+.btn-rotate_inactivo{
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(253, 45, 45); /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    font-size: 16px; /* Tamaño del texto del botón */
+    border: none;
+    border-radius: 25px; /* Borde redondeado del botón */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del botón */
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+.btn-rotate_inactivo:hover{
+    background-color: #fafafa; /* Color de fondo del botón */
+    border: 3px solid rgb(253, 45, 45);
+    box-shadow: 0px 0px 20px rgba(95, 95, 95, 0.558);
+    transition: all 0.5s;
+}
+
+.btn-rotate_inactivo:hover .btn-content {
+    transform: rotate(90deg); /* Rotación del contenido en sentido horario al pasar el mouse */
+    color: rgb(253, 45, 45);
+}
+
+/*ACTIVO */
+.btn-rotate_activo{
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(22, 216, 22); /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    font-size: 16px; /* Tamaño del texto del botón */
+    border: none;
+    border-radius: 25px; /* Borde redondeado del botón */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del botón */
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+.btn-rotate_activo:hover{
+    background-color: #fafafa; /* Color de fondo del botón */
+    border: 3px solid rgb(22, 216, 22);
+    box-shadow: 0px 0px 20px rgba(95, 95, 95, 0.558);
+    transition: all 0.5s;
+}
+
+.btn-rotate_activo:hover .btn-content {
+    transform: rotate(90deg); /* Rotación del contenido en sentido horario al pasar el mouse */
+    color: rgb(22, 216, 22);
+}
+
+.btn-content {
+    display: inline-block;
+    transition: transform 0.5s ease; /* Transición suave para efectos de rotación */
+}
+
+
+/* CSS PARA EL BOTON ELIMINAR */
+
+.btn-eliminar{
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    color: rgb(252, 38, 38); /* Color del texto del botón */
+    border: none;
+    border-radius: 25px; /* Borde redondeado del botón */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del botón */
+    transition: all 0.5s;
+}
+
+.btn-eliminar-content {
+    display: inline-block;
+}
+
+.btn-eliminar:hover{
+    background-color: rgb(252, 38, 38);
+    border: 1px solid #fafafa;
+    box-shadow: 0px 0px 20px rgba(95, 95, 95, 0.747);
+
+
+}
+
+.btn-eliminar:hover > .btn-eliminar-content{
+    transform: rotate(90deg); /* Rotación del contenido en sentido horario al pasar el mouse */
+    color: #fafafa;
+    transition: all .5s;
+}

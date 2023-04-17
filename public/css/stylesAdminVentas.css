@@ -1,0 +1,176 @@
+    .ocultar{
+        display: none;
+    }
+
+    .mainAdminVentas{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: .75em;
+    }
+
+    .mainAdminVentas .der{
+        width: 750px;
+        min-height: 500px;
+        margin-right: 20px;
+        background: white;
+        border-radius: 10px;
+        transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);    
+    }
+
+    .mainAdminVentas .der .der-mostrarDatos{
+        width: 100%;
+    }
+
+    .mainAdminVentas .der .der-buscadores{
+        width: 100%;
+    }
+
+    .mainAdminVentas .der .der-buscadores .titulo{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .mainAdminVentas .der .der-buscadores .subtitulo{
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+/* CSS PARA MOSTRAR EL TICKET */
+    .ticket {
+    width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-family: Arial, sans-serif;
+    position: relative;
+    
+    }
+
+    .ticket-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+
+    .ticket-title b{
+        float: right;
+    }
+
+    .ticket-info {
+    font-size: 14px;
+    margin-bottom: 5px;
+    }
+
+    .ticket-info-label {
+    font-weight: bold;
+    }
+
+    .ticket-divider {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top: 1px dashed #000;
+    }
+
+    .ticket-products {
+    margin-bottom: 10px;
+    }
+
+    .ticket-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    }
+
+    .ticket-product-name {
+    width: 250px;
+    font-size: 14px;
+    font-weight: bold;
+    }
+
+    .ticket-product-quantity {
+    font-size: 12px;
+    }
+
+    .ticket-product-price {
+    font-size: 14px;
+    }
+
+    .ticket-total {
+    font-size: 14px;
+    margin-top: 5px;
+    }
+
+    .ticket-total b{
+        float: right;
+    }
+
+    .ticket-note {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+    }
+
+/* Estilo de la tabla inspirado en la UI de Mac 10.14.6 Mojave */
+  .mac-table-container {
+    width: 75%;
+    max-height: 220px; /* Altura máxima de la tabla */
+    overflow-y: auto; /* Hace que la tabla sea scrollable verticalmente */
+    margin-top: .5em;
+    border-collapse: collapse;
+    margin-bottom: .5em;
+
+}
+
+  .mac-table {
+    font-family: 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: #f5f5f7;
+    color: #6a6a6a;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Asegura que el contenedor de la tabla sea un contexto de posición para el ícono de ordenamiento */
+
+
+  }
+
+  .mac-table th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .mac-table th {
+    font-weight: bold;
+    background-color: #eaeaea;
+    color: #3c3c3c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: none;
+    position: sticky; /* Hace que el encabezado se mantenga fijo */
+    top: 0; /* Ubica el encabezado en la parte superior del contenedor */
+    z-index: 1; /* Asegura que el encabezado esté por encima del cuerpo de la tabla */
+}
+
+  .mac-table td {
+    color: #3c3c3c;
+  }
+
+  .mac-table tr:hover {
+    background-color: #e0e0e0;
+    cursor:context-menu;
+  }
+
+  .mac-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+
+  .mac-table td:first-child {
+    padding-left: 24px;
+  }
+
+  .mac-table td:last-child {
+    padding-right: 24px;
+  }

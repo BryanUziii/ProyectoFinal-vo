@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celulandia</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6804/6804506.png">
+
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="background">
+  <header>
+    <div class="">
+      <h3 class="titulo">
+        <a href="#">Celulandia</a>
+    </h3>
+        <div class="divIniciarSesion">
+          <div id="btnsIniciarSesion" class="">
+            <div class="IniciarSesion" >
+              <a class="btns logIn" href="/pagPrincipal_login">Iniciar Sesion</a>
+              <a class="btns signUp" href="/pagPrincipal_signup">Registrarse</a>
+         
+            </div>
+          </div>
+
+          <div id="btnCerrarSesion" class="ocultar">
+              <div id="msgUsuario" class="msgUsuario ">
+                <div class="centrarDiv">
+                  <span>Usuario: <span id="nombreUsuario"></span></span>
+                </div>
+                <a class="btns btnSalir" onclick="cerrarSesión()">Cerrar Sesión</a>
+              </div>
+          </div>
+      </div>
+
+
+        <div class="navBar">
+            <div class="button-row">
+                <div><a title="INICIO" class="active" href="#"></a></div>
+                <div><a title="PRODUCTOS" href="/pagPrincipal_productos"></a></div>
+                <div><a title="CONTACTO" href="/pagPrincipal_contacto"></a></div>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <!-- <div id="Inicio" class="seccion-light centrarDiv">
+
+        <img style="max-width: 90%; margin-top: 20px;" src="https://vendeya.serviciosdeya.com/assets/panel/generales-e783662ba0b6eb78ae3e0c5c3dbe1b21.png" alt="">
+
+    </div> -->
+
+    <div id="AboutUs" class="aboutUs">
+        <div class="aboutUs-section">
+          <h2>Acerca de nosotros</h2>
+          <p>Somos una empresa especializada en ofrecer los smartphones más modernos y de alta calidad a precios competitivos. Nos comprometemos a brindar a nuestros clientes una experiencia de compra satisfactoria y agradable.</p>
+          <p>Nos enorgullecemos de ofrecer los mejores precios en el mercado, y estamos comprometidos en garantizar que nuestros clientes obtengan la mejor relación calidad-precio en cada compra. Además, todos nuestros smartphones son compatibles con cualquier compañía telefónica nacional, lo que brinda una mayor flexibilidad para elegir el plan que mejor se adapte a sus necesidades.</p>
+          <p>Nuestro equipo de servicio al cliente está siempre disponible para brindarle asistencia y responder cualquier pregunta que pueda tener antes, durante o después de su compra. Esperamos poder ayudarle a encontrar el smartphone perfecto para usted. ¡Gracias por visitar nuestra página web!</p>
+        </div>
+        
+        <div class="aboutUs-section">
+          <h2>Estamos Ubicados En:</h2>
+          <img src="/img/ubicacion.png" alt="">
+        </div>
+      </div>
+      
+
+
+
+    <footer>
+        <small>UPSIN 2023©</small>
+    </footer>
+
+    <script src="/js/cerrarSesion.js"></script>
+</body>
+</html>

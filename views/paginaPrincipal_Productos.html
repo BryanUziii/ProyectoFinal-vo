@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6804/6804506.png">
+
+
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/stylesPProductos.css">
+
+    <style>
+      .ocultar{
+        display: none;
+      }
+
+    </style>
+</head>
+<body class="background">
+  <header>
+    <div class="">
+        <h3 class="titulo">
+            <a href="/pagPrincipal" title="IR A LA PAGINA PRINCIPAL">Celulandia</a>
+        </h3>
+        <div class="divIniciarSesion">
+          <div id="btnsIniciarSesion" class="">
+            <div class="IniciarSesion" >
+              <a class="btns logIn" href="/pagPrincipal_login">Iniciar Sesion</a>
+              <a class="btns signUp" href="/pagPrincipal_signup">Registrarse</a>
+         
+            </div>
+          </div>
+
+          <div id="btnCerrarSesion" class="ocultar">
+            <div id="msgUsuario" class="msgUsuario ">
+              <div class="centrarDiv">
+                <span>Usuario: <span id="nombreUsuario"></span></span>
+              </div>
+                <a class="btns btnSalir" onclick="cerrarSesión()">Cerrar Sesión</a>
+              </div>
+          </div>
+      </div>
+
+
+        <div class="navBar">
+            <div class="button-row">
+                <div><a title="INICIO" href="/pagPrincipal"></a></div>
+                <div><a title="PRODUCTOS" class="active" href=""></a></div>
+                <div><a title="CONTACTO" href="/pagPrincipal_contacto"></a></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="carrito centrarDiv">
+  <!-- Button trigger modal -->
+  <button type="button" class="btnVerCarrito" data-bs-toggle="modal" data-bs-target="#MostrarCarrito" onclick="MostrarContenidoCarrito()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </svg>
+    Ver El Carrito
+  </button>
+
+  
+
+  <!-- modal-dialog-centered modal-dialog-scrollable -->
+  <!-- Modal -->
+    <div  class="modal fade" id="MostrarCarrito" tabindex="-1" >
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito:</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div  class="modal-body">
+              
+            <div id="lblCarritoVacio" class="centrarDiv">
+              <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor" class="bi bi-cart-x" viewBox="0 0 16 16">
+                <path d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793 7.354 5.646z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+              <h3>El Carrito Esta Vacio</h3>
+              <p>¡Explora Nuestro Catalogo!</p>
+            </div>
+
+            <table id="tablaCarrito" class="carrito-tabla ocultar">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Imagen</th>
+                  <th>Cantidad</th>
+                  <th>Precio c/u</th>
+                  <th>Eliminar</th>
+                </tr>
+              </thead>
+              <tbody id="mostrarProductosCarrito"></tbody>
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Total:</th>
+                <th id="carrito-total"></th>
+                <th></th>
+              </tr>
+            </table>
+            <fieldset id="switch" class="radio ocultar">
+              <h2>Seleccione el tipo de pago:</h2>
+              <input checked="" name="switch" id="on" value="Crédito" type="radio">
+              <label for="on">Crédito</label>
+              <input name="switch" id="off" value="Débito" type="radio">
+              <label for="off">Débito</label>
+            </fieldset>
+
+
+            <template id="templateCarrito">
+              <tr id="td">
+                <td id="carrito-Producto"></td>
+                <td><img id="carrito-Imagen" style="height: 75px;" src="" alt=""></td>
+                <td class=" centrarDiv">
+                  <div style="width: 120px; padding-top: 20px;" class="input-group">
+                    <button class="btn btn-sm btn-secondary" id="btnDisminuir" onclick="modificarCantidadCarrito(this, 'diminuir')">-</button>
+                    <input id="carrito-Cantidad" type="number" class="form-control" style="text-align: center;" disabled min="1" max="" value="1">
+                    <button class="btn btn-sm btn-secondary" id="btnIncremento" onclick="modificarCantidadCarrito(this, 'incrementar')">+</button>
+                  </div>
+                </td>
+                <td id="carrito-Precio"></td>
+                <td>
+                  <button id="carrito-btnEliminar" class="carrito-btnEliminar" onclick="EliminarProducto(this)">
+                      <i>    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                      </i>
+                  </button>
+                </td>
+              </tr>
+
+            </template>
+          </div>
+          <div class="modal-footer">
+            <button style="margin-right: auto;" class="btn btn-dark" onclick="VaciarCarrito()">Vaciar Carrito</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button id="btnRealizarVenta" type="button" class="btn btn-primary" onclick="RealizarVenta()" disabled>Realizar Compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<template id="templateCard">
+  <div class="card">
+    <div class="imgBx">
+        <img id="Imagen" src="https://ivenus.in/wp-content/uploads/2022/09/iphone-14-pro-finish-select-202209-6-1inch-deeppurple_AV1_GEO_EMEA.png">
+    </div>
+    <div class="contentBx">
+        <h2 id="Modelo">Iphone 14</h2>
+        <div class="size">
+            <h3>Capacidad :</h3>
+            <span id="Capacidad"></span>
+        </div>
+        <div class="size">
+            <h3>Precio :</h3>
+            <span id="Precio"></span>
+        </div>
+        <div class="size">
+            <h3>Cantidad en stock :</h3>
+            <span id="Cantidad"></span>
+        </div>  
+        <button id="btnAggCarrito" style="border: none; background: none;" onclick="AggProducto(this)">
+          <a>Añadir al Carrito</a>
+        </button>
+    </div>
+  </div>
+</template>
+
+<div id="mostrarProductos" class="container">
+
+</div>
+
+
+
+  <footer>
+    <small>UPSIN 2023©</small>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
+<script src="/js/cerrarSesion.js"></script>
+<script src="/js/productos.js"></script>
+
+</body>
+
+</html>

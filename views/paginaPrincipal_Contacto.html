@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6804/6804506.png">
+
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body class="background">
+  <header>
+    <div class="">
+      <h3 class="titulo">
+        <a href="/pagPrincipal" title="IR A LA PAGINA PRINCIPAL">Celulandia</a>
+      </h3>
+        <div class="divIniciarSesion">
+          <div id="btnsIniciarSesion" class="">
+            <div class="IniciarSesion" >
+              <a class="btns logIn" href="/pagPrincipal_login">Iniciar Sesion</a>
+              <a class="btns signUp" href="/pagPrincipal_signup">Registrarse</a>
+         
+            </div>
+          </div>
+
+          <div id="btnCerrarSesion" class="ocultar">
+            <div id="msgUsuario" class="msgUsuario ">
+                <div class="centrarDiv">
+                  <span>Usuario: <span id="nombreUsuario"></span></span>
+                </div>
+                <a class="btns btnSalir" onclick="cerrarSesión()">Cerrar Sesión</a>
+              </div>
+          </div>
+      </div>
+
+
+        <div class="navBar">
+            <div class="button-row">
+                <div><a title="INICIO" href="/pagPrincipal"></a></div>
+                <div><a title="PRODUCTOS"  href="/pagPrincipal_productos"></a></div>
+                <div><a title="CONTACTO" class="active" href="#"></a></div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div id="Contacto" style="padding: 10px;" class="seccion-light centrarDiv">
+        <div class="contact-form">
+            <h2>Contacto</h2>
+            <form action="mailto:2019030353@upsin.edu.mx" method="post" enctype="text/plain">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+        
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        
+            <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+  <footer>
+    <small>UPSIN 2023©</small>
+  </footer>
+
+
+  <script src="/js/cerrarSesion.js"></script>
+
+</body>
+</html>

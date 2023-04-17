@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6804/6804506.png">
+
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/stylesAdminVentas.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body class="background">
+<header>
+    <div class="centrarDiv">
+        <h3 class="titulo">
+            <a title="PAGINA PRINCIPAL" href="/pagPrincipal" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android2" viewBox="0 0 16 16">
+                    <path d="m10.213 1.471.691-1.26c.046-.083.03-.147-.048-.192-.085-.038-.15-.019-.195.058l-.7 1.27A4.832 4.832 0 0 0 8.005.941c-.688 0-1.34.135-1.956.404l-.7-1.27C5.303 0 5.239-.018 5.154.02c-.078.046-.094.11-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.697 3.697 0 0 0 3.5 5.02h9c0-.75-.208-1.44-.623-2.072a4.266 4.266 0 0 0-1.664-1.476ZM6.22 3.303a.367.367 0 0 1-.267.11.35.35 0 0 1-.263-.11.366.366 0 0 1-.107-.264.37.37 0 0 1 .107-.265.351.351 0 0 1 .263-.11c.103 0 .193.037.267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264Zm4.101 0a.351.351 0 0 1-.262.11.366.366 0 0 1-.268-.11.358.358 0 0 1-.112-.264c0-.103.037-.191.112-.265a.367.367 0 0 1 .268-.11c.104 0 .19.037.262.11a.367.367 0 0 1 .107.265c0 .102-.035.19-.107.264ZM3.5 11.77c0 .294.104.544.311.75.208.204.46.307.76.307h.758l.01 2.182c0 .276.097.51.292.703a.961.961 0 0 0 .7.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182c0 .276.097.51.292.703a.972.972 0 0 0 .71.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76c.291 0 .54-.103.749-.308.207-.205.311-.455.311-.75V5.365h-9v6.404Zm10.495-6.587a.983.983 0 0 0-.702.278.91.91 0 0 0-.293.685v4.063c0 .271.098.501.293.69a.97.97 0 0 0 .702.284c.28 0 .517-.095.712-.284a.924.924 0 0 0 .293-.69V6.146a.91.91 0 0 0-.293-.685.995.995 0 0 0-.712-.278Zm-12.702.283a.985.985 0 0 1 .712-.283c.273 0 .507.094.702.283a.913.913 0 0 1 .293.68v4.063a.932.932 0 0 1-.288.69.97.97 0 0 1-.707.284.986.986 0 0 1-.712-.284.924.924 0 0 1-.293-.69V6.146c0-.264.098-.491.293-.68Z"/>
+                </svg>
+                Celulandia
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                    <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                    <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                </svg>
+            </a>
+        </h3>
+        <div class="navBar">
+            <div class="button-row">
+                <div><a title="MENU PRINCIPAL" href="/"></a></div>
+                <div><a title="ADMINISTRADOR"  href="/admin"></a></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="mainAdminVentas" style="margin-top: 120px;">
+
+        <div class="der">
+
+
+            <div class="der-buscadores centrarDiv">
+                <span class="titulo">Buscar Venta:</span>
+                <div class="buscarPorId">
+                    <form id="formBuscarPorId">
+                        <div style="width: 300px;" class="input-group mb-3">
+                            <span class="input-group-text">Buscar Por ID</span>
+                            <input id="inputBuscarXId"  type="text" class="form-control" placeholder="Ingrese el ID" required>
+                            <button class="btn btn-primary" type="submit" id="button-addon2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="buscarPorFecha centrarDiv">
+                    <span class="subtitulo">Por Fecha:</span>
+                    <form id="formBuscarPorFecha">
+                        <div style="width: 330px;" class="input-group mb-3">
+                            <span class="input-group-text">Buscar Por Fecha</span>
+                            <input id="inputFecha1" type="date" class="form-control" required>
+                            <button class="btn btn-primary" type="submit" id="button-addon2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+    
+                    <form id="formBuscarEntreFechas">
+                        <div style="width: 420px;" class="input-group mb-3">
+                            <span class="input-group-text">De</span>
+                            <input id="inputFecha2" type="date" class="form-control" required>
+                            <span class="input-group-text">A</span>
+                            <input id="inputFecha3" type="date" class="form-control" required>
+                            <button class="btn btn-primary" type="submit" id="button-addon2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="buscarPorTotalDeVenta centrarDiv">
+                    <span class="subtitulo">Por Total:</span>
+                    <form id="formBuscarPorTotal">
+                        <div style="width: 400px;" class="input-group mb-3">
+                            <select id="inputMenorMayor" class="form-select" aria-label="select example">
+                                <option selected value=">">Ventas mayores a:</option>
+                                <option value='<'>Ventas menores a:</option>
+                              </select>
+                            <span class="input-group-text">$</span>
+                            <input id="inputTotal"  type="text" class="form-control" placeholder="$$$" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="submit" id="button-addon2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+              <div class="der-mostrarDatos centrarDiv">
+                <div class="mac-table-container">
+                    <table class="mac-table">
+                      <!-- Encabezado de la tabla -->
+                      <thead>
+                        <tr>
+                          <th data-column="id">ID <span class="sort-arrow"></span></th>
+                          <th data-column="fecha">Fecha <span class="sort-arrow"></span></th>
+                          <th data-column="total">Total <span class="sort-arrow"></span></th>
+                          <th data-column="total">Ver Datos <span class="sort-arrow"></span></th>
+                        </tr>
+                      </thead>
+                      <!-- Cuerpo de la tabla -->
+                      <template id="template-tablaVentas">
+                        <tr>
+                            <td id="tablaVentas-id"></td>
+                            <td id="tablaVentas-fecha"></td>
+                            <td id="tablaVentas-total"></td>
+                            <td><button id="tablaVentas-btnVerDatos" type="button" class="btn btn-primary" value="" onclick="mostrarTicket(this)">Ver</button></td>
+                        </tr>
+                      </template>
+                      <tbody id="mostrarListaVentas"></tbody>
+                    </table>
+                  </div>
+              </div>
+
+
+        </div>
+
+        <div class="izq">
+            <div class="ticket">
+                <h1 class="ticket-title">Datos de la Venta <b>Cód. <span id="ticket-id"></span></b></h1>
+                <div id="mostrarTicket" class="ticket-info">
+
+                </div>
+                <div class="ticket-divider"></div>
+                <div id="ticket-listaProductos" class="ticket-products">
+                    
+                </div>
+                <div class="ticket-divider"></div>
+                <p  class="ticket-total">Total: <b>$<span id="ticket-total"></span></b></p>
+            </div>
+        </div>
+
+        <template id="template-ticket">
+            <p><span class="ticket-info-label">Fecha: </span><span id="ticket-fecha"></span></p>
+            <p><span class="ticket-info-label">Datos del Comprador:</span></p>
+            <p><span class="ticket-info-label">Nombre:</span> <span id="ticket-userNombre"></span></p>
+            <p><span class="ticket-info-label">Teléfono:</span> <span id="ticket-userTelefono"></span></p>
+            <p><span class="ticket-info-label">Domicilio:</span> <span id="ticket-userDomicilio"></span></p>
+            <p><span class="ticket-info-label">Correo:</span> <span id="ticket-userCorreo"></span></p>
+            <p><span class="ticket-info-label">Método de Pago:</span> <span id="ticket-metodoPago"></span></p>
+        </template>
+        
+        <template id="template-ticket-produtos">
+            <div class="ticket-product">
+                <p id="ticket-productoDatos" class="ticket-product-name"></p>
+                <p id="ticket-productoCantidad" class="ticket-product-quantity">Cantidad: 2</p>
+                <p id="ticket-productoPrecio" class="ticket-product-price">$10.00</p>
+            </div>
+        </template>
+
+          
+          
+    </div>
+
+    <footer>
+        <small>UPSIN 2023©</small>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
+<script src="/js/adminVentas.js"></script>
+</body>
+
+</html>
